@@ -9,13 +9,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" integrity="sha512-siwe/oXMhSjGCwLn+scraPOWrJxHlUgMBMZXdPe2Tnk3I0x3ESCoLz7WZ5NTH6SZrywMY+PB1cjyqJ5jAluCOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css', t=app_start_stamp) }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/chisatomote.png') }}" />
 
-    <title>Lycoris Recoil</title>
+    <title>リコリス・リコイル</title>
     
-    <meta property="og:title" content="Lycoris Recoil" />
+    <meta property="og:title" content="リコリス・リコイル" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://lycorisre.co.il/" />
-    <meta property="og:description" content="Lycoris Recoil" />
+    <meta property="og:description" content="#リコリコ" />
 </head>
 
 <body>
@@ -33,8 +34,36 @@
                 </video>
             </div>
         </section>
+        <section class="mt-5 mb-5 container-fluid d-flex flex-wrap justify-content-sm-center justify-content-between align-items-center" id="tweets">
+            <!--<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"></div>-->
+        </section>
+        <section class="mt-5 mb-5">
+            <div id="load-container" class="d-flex justify-content-center">
+                <img id="loading" src="{{ url_for('static', filename='img/chisatomote.png') }}">
+            </div>
+        </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js" integrity="sha512-vyRAVI0IEm6LI/fVSv/Wq/d0KUfrg3hJq2Qz5FlfER69sf3ZHlOrsLriNm49FxnpUGmhx+TaJKwJ+ByTLKT+Yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
+
     <script src="{{ url_for('static', filename='script.js', t=app_start_stamp) }}"></script>
 </body>
 </html>

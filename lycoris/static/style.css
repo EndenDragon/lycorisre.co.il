@@ -4,8 +4,9 @@ body {
 
 #top-panel {
     background-image: url('img/bg_in.jpeg');
+    background-attachment: fixed;
     height: 100vh;
-    border-bottom: 4px red solid;
+    border-bottom: 9px red solid;
 }
 
 #logo {
@@ -26,13 +27,59 @@ video:hover {
 }
 
 @keyframes float {
-    0% {
-      transform: translatey(0px);
-    }
-    50% {
-      transform: translatey(8px);
-    }
-    100% {
-      transform: translatey(0px);
-    }
+  0% {
+    transform: translatey(0px);
   }
+  50% {
+    transform: translatey(8px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+#loading {
+  transform: rotateY(0deg);
+	animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+	0% {
+    transform: rotateY(0deg);
+  }
+	50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes colorpulse {
+  0% {
+    background-color: #E5E5E5;
+  }
+  50% {
+    background-color: #D3D3D3;
+  }
+  100% {
+    background-color: #E5E5E5;
+  }
+}
+
+#tweets > div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tweets > div.temp {
+  width: 248px;
+  height: 410px;
+  background-color: lightgray;
+  animation: colorpulse 1s ease-in-out infinite;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
