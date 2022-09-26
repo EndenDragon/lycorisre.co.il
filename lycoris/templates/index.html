@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" integrity="sha512-siwe/oXMhSjGCwLn+scraPOWrJxHlUgMBMZXdPe2Tnk3I0x3ESCoLz7WZ5NTH6SZrywMY+PB1cjyqJ5jAluCOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css', t=app_start_stamp) }}">
+
+    <title>Lycoris Recoil</title>
+    
+    <meta property="og:title" content="Lycoris Recoil" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lycorisre.co.il/" />
+    <meta property="og:description" content="Lycoris Recoil" />
+</head>
+
+<body>
+    <section id="overlay">
+
+    </section>
+    <main>
+        <section id="top-panel">
+            <div class="d-flex justify-content-center pt-3">
+                <img id="logo" src="{{ url_for('static', filename='img/logo.png') }}">
+            </div>
+            <div class="mt-5 d-flex justify-content-center">
+                <video class="rounded-3 border border-success" style="--bs-border-opacity: .5;" id="video" autoplay loop muted> <!-- autoplay loop muted -->
+                    <source src="{{ url_for('static', filename='webm/out.webm') }}" type="video/webm">
+                </video>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js" integrity="sha512-vyRAVI0IEm6LI/fVSv/Wq/d0KUfrg3hJq2Qz5FlfER69sf3ZHlOrsLriNm49FxnpUGmhx+TaJKwJ+ByTLKT+Yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ url_for('static', filename='script.js', t=app_start_stamp) }}"></script>
+</body>
+</html>

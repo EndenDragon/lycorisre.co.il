@@ -1,0 +1,38 @@
+body {
+    background-image: url('img/bg_tw.jpeg');
+}
+
+#top-panel {
+    background-image: url('img/bg_in.jpeg');
+    height: 100vh;
+    border-bottom: 4px red solid;
+}
+
+#logo {
+    max-width: 80vw;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+}
+
+video {
+    max-width: 70vw;
+    max-height: 70vh;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+video:hover {
+    transform: scale(1.04);
+}
+
+@keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(8px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
